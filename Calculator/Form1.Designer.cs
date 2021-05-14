@@ -98,6 +98,7 @@ namespace Calculator
             this.button_AC.TabStop = false;
             this.button_AC.Text = "AC";
             this.button_AC.UseVisualStyleBackColor = false;
+            this.button_AC.Click += new System.EventHandler(this.button_AC_Click);
             // 
             // button_addition
             // 
@@ -173,6 +174,7 @@ namespace Calculator
             this.button_3.TabStop = false;
             this.button_3.Text = "3";
             this.button_3.UseVisualStyleBackColor = false;
+            this.button_3.Click += new System.EventHandler(this.button_3_Click);
             // 
             // button_2
             // 
@@ -188,6 +190,7 @@ namespace Calculator
             this.button_2.TabStop = false;
             this.button_2.Text = "2";
             this.button_2.UseVisualStyleBackColor = false;
+            this.button_2.Click += new System.EventHandler(this.button_2_Click);
             // 
             // button_1
             // 
@@ -203,6 +206,7 @@ namespace Calculator
             this.button_1.TabStop = false;
             this.button_1.Text = "1";
             this.button_1.UseVisualStyleBackColor = false;
+            this.button_1.Click += new System.EventHandler(this.button_1_Click);
             // 
             // button_6
             // 
@@ -218,6 +222,7 @@ namespace Calculator
             this.button_6.TabStop = false;
             this.button_6.Text = "6";
             this.button_6.UseVisualStyleBackColor = false;
+            this.button_6.Click += new System.EventHandler(this.button_6_Click);
             // 
             // button_5
             // 
@@ -233,6 +238,7 @@ namespace Calculator
             this.button_5.TabStop = false;
             this.button_5.Text = "5";
             this.button_5.UseVisualStyleBackColor = false;
+            this.button_5.Click += new System.EventHandler(this.button_5_Click);
             // 
             // button_4
             // 
@@ -248,6 +254,7 @@ namespace Calculator
             this.button_4.TabStop = false;
             this.button_4.Text = "4";
             this.button_4.UseVisualStyleBackColor = false;
+            this.button_4.Click += new System.EventHandler(this.button_4_Click);
             // 
             // button_0
             // 
@@ -263,6 +270,7 @@ namespace Calculator
             this.button_0.TabStop = false;
             this.button_0.Text = "0";
             this.button_0.UseVisualStyleBackColor = false;
+            this.button_0.Click += new System.EventHandler(this.button_0_Click);
             // 
             // button_9
             // 
@@ -278,6 +286,7 @@ namespace Calculator
             this.button_9.TabStop = false;
             this.button_9.Text = "9";
             this.button_9.UseVisualStyleBackColor = false;
+            this.button_9.Click += new System.EventHandler(this.button_9_Click);
             // 
             // button_8
             // 
@@ -293,6 +302,7 @@ namespace Calculator
             this.button_8.TabStop = false;
             this.button_8.Text = "8";
             this.button_8.UseVisualStyleBackColor = false;
+            this.button_8.Click += new System.EventHandler(this.button_8_Click);
             // 
             // button_7
             // 
@@ -308,6 +318,7 @@ namespace Calculator
             this.button_7.TabStop = false;
             this.button_7.Text = "7";
             this.button_7.UseVisualStyleBackColor = false;
+            this.button_7.Click += new System.EventHandler(this.button_7_Click);
             // 
             // button_equal
             // 
@@ -353,6 +364,7 @@ namespace Calculator
             this.button_dot.TabStop = false;
             this.button_dot.Text = ".";
             this.button_dot.UseVisualStyleBackColor = false;
+            this.button_dot.Click += new System.EventHandler(this.button_dot_Click);
             // 
             // panel_Border
             // 
@@ -381,6 +393,7 @@ namespace Calculator
             this.button_exit.TabIndex = 0;
             this.button_exit.Text = "X";
             this.button_exit.UseVisualStyleBackColor = true;
+            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
             // 
             // textBox
             // 
