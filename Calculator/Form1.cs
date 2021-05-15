@@ -16,11 +16,12 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
         int mouseX = 0, mouseY = 0;
         bool mouseDown;
-        double Value = 0;
-        string operation = "";
-        bool operation_pressed = false;
+        double FirstNum = 0;
+        double SecondNum = 0;
+        string operation = "";        
 
         private void panel_Border_MouseDown(object sender, MouseEventArgs e)
         {
@@ -106,6 +107,11 @@ namespace Calculator
         private void button_AC_Click(object sender, EventArgs e)
         {
             textBox.Text = "0";
+            label_secondScreen.Text = "";
+
+            FirstNum = 0;
+            SecondNum = 0;
+            operation = "";
         }
 
         private void button_C_Click(object sender, EventArgs e)
@@ -118,6 +124,60 @@ namespace Calculator
             {
                 textBox.Text = "0";
             }
+        }
+
+        private void button_Devision_Click(object sender, EventArgs e)
+        {
+             Operator_operation(sender);                       
+        }
+        private void Operator_operation(object btn)
+        {            
+            Button b = (Button)btn;
+            label_secondScreen.Text = textBox.Text + b.Text;
+            FirstNum = Double.Parse(textBox.Text);
+            operation = b.Text;
+            textBox.Text = "";            
+        }
+
+        private void button_equal_Click(object sender, EventArgs e)
+        {
+            SecondNum = double.Parse(textBox.Text);
+            switch (operation)
+            {
+                case "+":
+                    textBox.Text = Convert.ToString(FirstNum + SecondNum);
+                    label_secondScreen.Text = textBox.Text;
+                    break;
+                case "-":
+                    textBox.Text = Convert.ToString(FirstNum - SecondNum);
+                    label_secondScreen.Text = textBox.Text;
+                    break;
+                case "×":
+                    textBox.Text = Convert.ToString(FirstNum * SecondNum);
+                    label_secondScreen.Text = textBox.Text;
+                    break;
+                case "÷":
+                    textBox.Text = Convert.ToString(FirstNum / SecondNum);
+                    label_secondScreen.Text = textBox.Text;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void button_Multiplication_Click(object sender, EventArgs e)
+        {
+            Operator_operation(sender);
+        }
+
+        private void button_subtraction_Click(object sender, EventArgs e)
+        {
+            Operator_operation(sender);
+        }
+
+        private void button_addition_Click(object sender, EventArgs e)
+        {
+            Operator_operation(sender);
         }
 
         private void Button_Click(object btn)
@@ -139,6 +199,5 @@ namespace Calculator
                 textBox.Text = textBox.Text + b.Text;
             }            
         }
-
     }
 }

@@ -114,6 +114,7 @@ namespace Calculator
             this.button_addition.TabStop = false;
             this.button_addition.Text = "+";
             this.button_addition.UseVisualStyleBackColor = false;
+            this.button_addition.Click += new System.EventHandler(this.button_addition_Click);
             // 
             // button_subtraction
             // 
@@ -129,6 +130,7 @@ namespace Calculator
             this.button_subtraction.TabStop = false;
             this.button_subtraction.Text = "-";
             this.button_subtraction.UseVisualStyleBackColor = false;
+            this.button_subtraction.Click += new System.EventHandler(this.button_subtraction_Click);
             // 
             // button_Multiplication
             // 
@@ -144,6 +146,7 @@ namespace Calculator
             this.button_Multiplication.TabStop = false;
             this.button_Multiplication.Text = "×";
             this.button_Multiplication.UseVisualStyleBackColor = false;
+            this.button_Multiplication.Click += new System.EventHandler(this.button_Multiplication_Click);
             // 
             // button_Devision
             // 
@@ -159,6 +162,7 @@ namespace Calculator
             this.button_Devision.TabStop = false;
             this.button_Devision.Text = "÷";
             this.button_Devision.UseVisualStyleBackColor = false;
+            this.button_Devision.Click += new System.EventHandler(this.button_Devision_Click);
             // 
             // button_3
             // 
@@ -334,6 +338,7 @@ namespace Calculator
             this.button_equal.TabStop = false;
             this.button_equal.Text = "=";
             this.button_equal.UseVisualStyleBackColor = false;
+            this.button_equal.Click += new System.EventHandler(this.button_equal_Click);
             // 
             // button_C
             // 
@@ -424,9 +429,11 @@ namespace Calculator
             // label_secondScreen
             // 
             this.label_secondScreen.AutoSize = true;
-            this.label_secondScreen.Location = new System.Drawing.Point(13, 104);
+            this.label_secondScreen.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_secondScreen.ForeColor = System.Drawing.Color.Black;
+            this.label_secondScreen.Location = new System.Drawing.Point(12, 113);
             this.label_secondScreen.Name = "label_secondScreen";
-            this.label_secondScreen.Size = new System.Drawing.Size(0, 17);
+            this.label_secondScreen.Size = new System.Drawing.Size(0, 34);
             this.label_secondScreen.TabIndex = 3;
             // 
             // Form1
