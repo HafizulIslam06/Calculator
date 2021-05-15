@@ -49,10 +49,10 @@ namespace Calculator
             this.button_C = new System.Windows.Forms.Button();
             this.button_dot = new System.Windows.Forms.Button();
             this.panel_Border = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button_exit = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
             this.label_secondScreen = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_Border.SuspendLayout();
             this.SuspendLayout();
@@ -349,6 +349,7 @@ namespace Calculator
             this.button_C.TabStop = false;
             this.button_C.Text = "C";
             this.button_C.UseVisualStyleBackColor = false;
+            this.button_C.Click += new System.EventHandler(this.button_C_Click);
             // 
             // button_dot
             // 
@@ -379,6 +380,18 @@ namespace Calculator
             this.panel_Border.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Border_MouseDown);
             this.panel_Border.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Border_MouseMove);
             this.panel_Border.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_Border_MouseUp);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Enabled = false;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(108, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 34);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Calculator";
             // 
             // button_exit
             // 
@@ -413,20 +426,8 @@ namespace Calculator
             this.label_secondScreen.AutoSize = true;
             this.label_secondScreen.Location = new System.Drawing.Point(13, 104);
             this.label_secondScreen.Name = "label_secondScreen";
-            this.label_secondScreen.Size = new System.Drawing.Size(0, 21);
+            this.label_secondScreen.Size = new System.Drawing.Size(0, 17);
             this.label_secondScreen.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(108, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 34);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Calculator";
             // 
             // Form1
             // 

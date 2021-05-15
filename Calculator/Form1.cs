@@ -106,16 +106,38 @@ namespace Calculator
         private void button_AC_Click(object sender, EventArgs e)
         {
             textBox.Text = "0";
-        }                
+        }
+
+        private void button_C_Click(object sender, EventArgs e)
+        {
+            if (textBox.Text.Length > 0)
+            {
+                textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1, 1);
+            }
+            if (textBox.Text == "")
+            {
+                textBox.Text = "0";
+            }
+        }
 
         private void Button_Click(object btn)
         {
-            if (textBox.Text == "0" || (operation_pressed))
+            Button b = (Button)btn;
+            if (textBox.Text == "0")
             {
                 textBox.Clear();
             }
-            Button b = (Button)btn;
-            textBox.Text = textBox.Text + b.Text;
+            if (b.Text == ".")
+            {
+                if (!textBox.Text.Contains("."))
+                {
+                    textBox.Text = textBox.Text + b.Text;
+                }
+            }            
+            else
+            {
+                textBox.Text = textBox.Text + b.Text;
+            }            
         }
 
     }
