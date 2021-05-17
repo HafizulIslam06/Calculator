@@ -131,12 +131,20 @@ namespace Calculator
              Operator_operation(sender);                       
         }
         private void Operator_operation(object btn)
-        {            
+        {
             Button b = (Button)btn;
-            label_secondScreen.Text = textBox.Text + b.Text;
-            FirstNum = Double.Parse(textBox.Text);
-            operation = b.Text;
-            textBox.Text = "";            
+            if (operation == "")
+            {                
+                label_secondScreen.Text = textBox.Text + b.Text;
+                FirstNum = Double.Parse(textBox.Text);
+                operation = b.Text;
+                textBox.Text = "";
+            }
+            else
+            {
+                label_secondScreen.Text = FirstNum + b.Text;
+                operation = b.Text;
+            }                        
         }
 
         private void button_equal_Click(object sender, EventArgs e)
@@ -163,6 +171,7 @@ namespace Calculator
                 default:
                     break;
             }
+            operation = "";
         }
 
         private void button_Multiplication_Click(object sender, EventArgs e)
